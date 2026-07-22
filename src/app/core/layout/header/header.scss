@@ -1,0 +1,19 @@
+.header {
+    background-color: #fff;
+
+    &__top-bar {
+        padding: 20px 0;
+    }
+
+    &__links {
+        ul {
+            li {
+                a {
+                    color: #000;
+                }
+            }
+        }
+    }
+
+    &__contact {}
+}
