@@ -2,12 +2,19 @@
     background-color: var(--white);
 
     &__wrapper {
-        padding: 0 10%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
     }
 
     &__top-bar {
-        padding: 20px 0;
         border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        padding: 10px 10%;
+
+        .menu-icon {
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            padding: 10px;
+            border-radius: 4px;
+        }
     }
 
     &__links {
@@ -101,11 +108,38 @@
     }
 
     .main-header {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        background-color: var(--white);
+        padding: 10px 10%;
+
         &__logo {}
 
-        &__search {}
+        &__search {
+            input[type="text"] {
+                padding: 10px 10px;
+                border-radius: 4px 0px 0px 4px;
+                border: 1px solid var(--green);
+                border-inline-end: 0;
+            }
 
-        &__actions {}
+            select {
+                border-radius: 0;
+                border: 1px solid var(--green);
+                border-inline-end: 0;
+                padding-inline: 10px;
+            }
+
+            .btn-danger {
+                border-radius: 0px 4px 4px 0;
+            }
+        }
+
+        &__actions {
+            div{
+                cursor: pointer;
+                color: var( --black-300)
+            }
+        }
 
 
     }
