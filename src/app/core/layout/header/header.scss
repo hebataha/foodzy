@@ -1,10 +1,13 @@
 .header {
     background-color: var(--white);
-    margin: 0 10%;
+
+    &__wrapper {
+        padding: 0 10%;
+    }
 
     &__top-bar {
         padding: 20px 0;
-       border-bottom: 1px solid  rgba(0, 0, 0, 0.08);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08);
     }
 
     &__links {
@@ -93,5 +96,17 @@
         }
     }
 
-    &__contact {}
+    &__contact {
+        font-size: .8rem;
+    }
+
+    .main-header {
+        &__logo {}
+
+        &__search {}
+
+        &__actions {}
+
+
+    }
 }
