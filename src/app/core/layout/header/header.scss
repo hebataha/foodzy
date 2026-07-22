@@ -1,15 +1,93 @@
 .header {
-    background-color: #fff;
+    background-color: var(--white);
+    margin: 0 10%;
 
     &__top-bar {
         padding: 20px 0;
+       border-bottom: 1px solid  rgba(0, 0, 0, 0.08);
     }
 
     &__links {
         ul {
+            .has-list {
+                position: relative;
+
+                &:hover {
+                    .dropdown-list {
+                        opacity: 1;
+                        pointer-events: auto;
+                        transition: var(--transition);
+
+                    }
+                }
+
+                &::after {
+                    content: "\f107";
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 900;
+                    width: 20px;
+                    height: 20px;
+                    position: absolute;
+                    inset-inline-end: -25px;
+                    top: 5px;
+                }
+
+                .dropdown-list {
+                    position: absolute;
+                    top: 100%;
+                    background-color: var(--white);
+                    border: 1px solid var(--gray-100);
+                    border-radius: 5px;
+                    min-width: 200px;
+                    padding: 20px;
+                    opacity: 0;
+                    pointer-events: none;
+                    transition: var(--transition);
+                    z-index: 9;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+
+                    li {
+                        padding: 5px 0;
+                        cursor: pointer;
+
+                        &:hover {
+                            background-color: var(--light-gray-100);
+                            transition: var(--transition);
+
+                        }
+
+
+                        a {
+                            border-bottom: 1px solid var(--gray-100);
+                            width: 100%;
+                            display: block;
+                            padding-bottom: 5px;
+                            font-size: .9rem;
+
+                        }
+
+                        &:last-child {
+                            a {
+                                border: 0;
+                            }
+                        }
+
+                    }
+                }
+
+            }
+
             li {
+                position: relative;
+
+
+
                 a {
-                    color: #000;
+                    color: var(--black-200);
+                    text-transform: capitalize;
                 }
             }
         }

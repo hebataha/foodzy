@@ -1,50 +1,53 @@
-/* ==========================
-   Primary Colors
-========================== */
+:root {
+  /* ==========================
+     Primary Colors
+  ========================== */
 
-$primary: #F53E32;
-$primary-light: #FF6868;
+  --primary: #F53E32;
+  --primary-light: #FF6868;
 
-$white: #FFFFFF;
+  --white: #FFFFFF;
 
-$black: #000000;
-$black-100: #242424;
-$black-200: #2B2B2D;
-$black-300: #2D2D2D;
-$black-400: #404040;
+  --black: #000000;
+  --black-100: #242424;
+  --black-200: #2B2B2D;
+  --black-300: #2D2D2D;
+  --black-400: #404040;
 
-$gray-100: #ADADAD;
-$gray-200: #777777;
-$gray-300: #7A7A7A;
-$gray-400: #555555;
-$gray-500: #444444;
+  --gray-100: #ADADAD;
+  --gray-200: #777777;
+  --gray-300: #7A7A7A;
+  --gray-400: #555555;
+  --gray-500: #444444;
 
-/* ==========================
-   Secondary Colors
-========================== */
+  /* ==========================
+     Secondary Colors
+  ========================== */
 
-$light-gray: #E9E9E9;
-$light-gray-100: #E9ECEF;
-$light-gray-200: #F4F6FA;
-$light-gray-300: #F7F7F8;
+  --light-gray: #E9E9E9;
+  --light-gray-100: #E9ECEF;
+  --light-gray-200: #F4F6FA;
+  --light-gray-300: #F7F7F8;
 
-$green: #3BB77E;
-$green-light: #BCE3C9;
-$green-dark: #64B496;
+  --green: #3BB77E;
+  --green-light: #BCE3C9;
+  --green-dark: #64B496;
 
-$blue: #67BCEE;
-$blue-light: #6C9EFF;
-$blue-dark: #253D4E;
+  --blue: #67BCEE;
+  --blue-light: #6C9EFF;
+  --blue-dark: #253D4E;
 
-$orange: #F59758;
-$orange-light: #F5885F;
+  --orange: #F59758;
+  --orange-light: #F5885F;
 
-$pink: #F74B81;
+  --pink: #F74B81;
 
-$yellow: #DEDE44;
+  --yellow: #DEDE44;
 
-$red-light: #FB5555;
+  --red-light: #FB5555;
 
-$brown-light: #E9CBBE;
+  --brown-light: #E9CBBE;
 
-$overlay: rgba(0, 0, 0, 0.7);
+  --overlay: rgba(0, 0, 0, 0.7);
+  --transition: all .3s ease-in-out;
+}
