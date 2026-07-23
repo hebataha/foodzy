@@ -8,5 +8,11 @@ import { RouterLink } from '@angular/router';
   styleUrl: './header.scss',
 })
 export class Header {
+  showMenuMob: boolean = false;
 
+  toggleMenu() {
+    this.showMenuMob = !this.showMenuMob;
+    console.log(this.showMenuMob);
+    
+  }
 }

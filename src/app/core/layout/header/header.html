@@ -1,8 +1,9 @@
 <header class="header">
     <div class="header__wrapper">
-
-
-        <section class="header__top-bar d-flex justify-content-between align-items-center">
+     <div class="menu-icon-mob" (click)="toggleMenu()">
+                <img src="./assets/bars.svg" alt="menu" />
+            </div>
+        <section class="header__top-bar d-flex justify-content-between align-items-center" [class.mob-open]="showMenuMob">
             <div class="menu-icon">
                 <img src="./assets/bars.svg" alt="menu" />
             </div>
@@ -32,16 +33,16 @@
                         <a routerLink="">Products</a>
                         <ul class="dropdown-list d-flex flex-column gap-3">
                             <li>
-                                <a> category 1</a>
+                                <a> Products 1</a>
                             </li>
                             <li>
-                                <a> category 2</a>
+                                <a> Products 2</a>
                             </li>
                             <li>
-                                <a> category 3</a>
+                                <a> Products 3</a>
                             </li>
                             <li>
-                                <a> category 4</a>
+                                <a> Products 4</a>
                             </li>
                         </ul>
                     </li>
@@ -49,16 +50,16 @@
                         <a routerLink="">pages</a>
                         <ul class="dropdown-list d-flex flex-column gap-3">
                             <li>
-                                <a> category 1</a>
+                                <a> pages 1</a>
                             </li>
                             <li>
-                                <a> category 2</a>
+                                <a> pages 2</a>
                             </li>
                             <li>
-                                <a> category 3</a>
+                                <a> pages 3</a>
                             </li>
                             <li>
-                                <a> category 4</a>
+                                <a> pages 4</a>
                             </li>
                         </ul>
                     </li>
@@ -66,16 +67,16 @@
                         <a routerLink="">blog</a>
                         <ul class="dropdown-list d-flex flex-column gap-3">
                             <li>
-                                <a> category 1</a>
+                                <a> blog 1</a>
                             </li>
                             <li>
-                                <a> category 2</a>
+                                <a> blog 2</a>
                             </li>
                             <li>
-                                <a> category 3</a>
+                                <a> blog 3</a>
                             </li>
                             <li>
-                                <a> category 4</a>
+                                <a> blog 4</a>
                             </li>
                         </ul>
                     </li>
@@ -83,16 +84,16 @@
                         <a routerLink="">elements</a>
                         <ul class="dropdown-list d-flex flex-column gap-3">
                             <li>
-                                <a> category 1</a>
+                                <a> elements 1</a>
                             </li>
                             <li>
-                                <a> category 2</a>
+                                <a> elements 2</a>
                             </li>
                             <li>
-                                <a> category 3</a>
+                                <a> elements 3</a>
                             </li>
                             <li>
-                                <a> category 4</a>
+                                <a> elements 4</a>
                             </li>
                         </ul>
                     </li>
@@ -104,7 +105,7 @@
             </div>
 
         </section>
-        <section class="main-header d-flex justify-content-between align-items-center">
+        <section class="main-header d-flex justify-content-between align-items-center flex-wrap gap-3">
             <div class="main-header__logo">
                 <img src="./assets/logo.svg" title="logo" alt="logo" />
             </div>
@@ -129,7 +130,7 @@
                 </div>
                 <div class="d-flex gap-2 align-items-center">
                     <i class="fa-regular fa-heart"></i>
-                    <span>wachlist</span>
+                    <span>wishlist</span>
                 </div>
                 <div class="d-flex gap-2 align-items-center">
                     <i class="fa-solid fa-cart-shopping"></i>

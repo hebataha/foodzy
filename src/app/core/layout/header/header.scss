@@ -1,9 +1,32 @@
-
 .header {
     background-color: var(--white);
 
     &__wrapper {
         border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+
+        .menu-icon-mob {
+            display: none;
+            background-color: var(--gold);
+            position: absolute;
+            top: 20px;
+            z-index: 99;
+            inset-inline-end: 0px;
+            padding: 20px;
+            border-radius: 6px;
+            padding: 10px;
+
+            img {
+                filter: brightness(0) invert(1);
+                width: 20px;
+                height: 20px;
+
+            }
+
+
+            @media(max-width:992px) {
+                display: block;
+            }
+        }
 
     }
 
@@ -15,20 +38,33 @@
             border: 1px solid rgba(0, 0, 0, 0.08);
             padding: 10px;
             border-radius: 4px;
+
+            @media(max-width:992px) {
+                display: none;
+            }
         }
-        @media(max-width:992px){
-        flex-direction: column;
+
+        @media(max-width:992px) {
+            display: none !important;
+
+            &.mob-open {
+                flex-direction: column;
                 position: fixed;
                 background-color: #fff;
                 width: 100%;
                 height: 100%;
                 inset: 0;
                 align-items: start !important;
-                justify-content: start !important;
-                ul{
-                    flex-direction: column;
-                }
-            
+                justify-content: center !important;
+                z-index: 9;
+                display: flex !important;
+
+            }
+
+            ul {
+                flex-direction: column;
+            }
+
         }
     }
 
@@ -77,13 +113,14 @@
                     li {
                         padding: 5px 0;
                         cursor: pointer;
+                        border-radius: 5px;
 
                         &:hover {
                             background-color: var(--light-gray-100);
                             transition: var(--transition);
+                            transform:translateX(3px)
 
                         }
-
 
                         a {
                             border-bottom: 1px solid var(--gray-100);
@@ -91,6 +128,10 @@
                             display: block;
                             padding-bottom: 5px;
                             font-size: .9rem;
+
+                            @media(max-width:1200px) {
+                                font-size: .8rem;
+                            }
 
                         }
 
@@ -120,9 +161,10 @@
 
     &__contact {
         font-size: .8rem;
-          @media(max-width:992px){
+
+        @media(max-width:992px) {
             margin-top: 30px;
-          }
+        }
     }
 
     .main-header {
@@ -130,7 +172,15 @@
         background-color: var(--white);
         padding: 10px 10%;
 
-        &__logo {}
+        &__logo {
+            img {
+                @media(max-width:992px) {
+                    width: 100px;
+                }
+
+            }
+
+        }
 
         &__search {
             input[type="text"] {
@@ -138,7 +188,12 @@
                 border-radius: 4px 0px 0px 4px;
                 border: 1px solid var(--green);
                 border-inline-end: 0;
-                &::placeholder{
+
+                @media(max-width:1200px) {
+                    width: 100px;
+                }
+
+                &::placeholder {
                     font-size: .8rem;
                 }
             }
@@ -156,9 +211,15 @@
         }
 
         &__actions {
-            div{
+            div {
                 cursor: pointer;
-                color: var( --black-300)
+                color: var(--black-300);
+
+                @media(max-width:1200px) {
+                    span {
+                        display: none;
+                    }
+                }
             }
         }
 
