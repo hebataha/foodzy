@@ -1,0 +1,97 @@
+.hero {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    height: 100dvh;
+
+    &__cover {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        inset: 0;
+
+        .overlay {
+            background-color: rgb(49 16 16 / 50%);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: 2;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            z-index: 1;
+        }
+    }
+
+    &__content {
+        position: absolute;
+        z-index: 9;
+        color: var(--white);
+        width: 50vw;
+        padding: 0 100px;
+        @media(max-width:992px){
+            width: 100%;
+        }
+
+        .desc {
+            font-size: 1.4rem;
+            color: var(--gray-100);
+            text-transform: capitalize;
+        }
+
+        .title {
+            font-size: 4rem;
+            font-weight: 900;
+            text-transform: capitalize;
+            line-height: 1.5;
+
+
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #fff;
+            background-color: var(--gold);
+            margin-top: 35px;
+            font-size: .9rem;
+            text-transform: uppercase;
+            border-radius: 50px;
+            padding: 10px 15px;
+            font-weight: 600;
+            transform: var(--transition);
+
+            &:hover {
+                background-color: rgb(180, 107, 25);
+            }
+
+            .text {
+                display: inline-block;
+                margin: 0 5px;
+            }
+
+            .arrow {
+                background-color: var(--white);
+                border-radius: 50%;
+                width: 35px;
+                height: 35px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: var(--gold);
+
+                i {
+                    font-size: .9rem;
+                }
+            }
+        }
+
+    }
+}

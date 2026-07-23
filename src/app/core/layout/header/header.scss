@@ -1,3 +1,4 @@
+
 .header {
     background-color: var(--white);
 
@@ -14,6 +15,20 @@
             border: 1px solid rgba(0, 0, 0, 0.08);
             padding: 10px;
             border-radius: 4px;
+        }
+        @media(max-width:992px){
+        flex-direction: column;
+                position: fixed;
+                background-color: #fff;
+                width: 100%;
+                height: 100%;
+                inset: 0;
+                align-items: start !important;
+                justify-content: start !important;
+                ul{
+                    flex-direction: column;
+                }
+            
         }
     }
 
@@ -105,6 +120,9 @@
 
     &__contact {
         font-size: .8rem;
+          @media(max-width:992px){
+            margin-top: 30px;
+          }
     }
 
     .main-header {
@@ -120,6 +138,9 @@
                 border-radius: 4px 0px 0px 4px;
                 border: 1px solid var(--green);
                 border-inline-end: 0;
+                &::placeholder{
+                    font-size: .8rem;
+                }
             }
 
             select {
