@@ -1,0 +1,32 @@
+.popular-categories {
+  padding: 100px 0;
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 60px;
+
+    .sub-title {
+      display: inline-block;
+      font-size: 14px;
+      letter-spacing: 4px;
+      color: #f54748;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-size: 52px;
+      font-weight: 700;
+      color: #222;
+    }
+  }
+
+  .categories {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    flex-wrap: wrap;
+  }
+
+
+}
