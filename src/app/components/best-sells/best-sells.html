@@ -1,10 +1,29 @@
 <section class="best-sells">
     <div class="container">
-        <div class="col-12 col-lg-4">
-            <app-ads></app-ads>
-        </div>
-        <div class="col-12 col-lg-8">
-            <app-shopping-card></app-shopping-card>
+        <div class="row">
+            <div class="col-12 col-lg-3">
+                <app-ads></app-ads>
+            </div>
+            <div class="col-12 col-lg-9">
+
+                <div class="shopping-card__wrapper">
+
+                    <swiper-container navigation="true" pagination="true" pagination-clickable="true" space-between="100" autoplay="true"
+                        slides-per-view="4">
+                        <swiper-slide> <app-shopping-card></app-shopping-card></swiper-slide>
+                        <swiper-slide> <app-shopping-card></app-shopping-card></swiper-slide>
+                        <swiper-slide> <app-shopping-card></app-shopping-card> </swiper-slide>
+                        <swiper-slide> <app-shopping-card></app-shopping-card> </swiper-slide>
+                        <swiper-slide> <app-shopping-card></app-shopping-card> </swiper-slide>
+                        <swiper-slide> <app-shopping-card></app-shopping-card> </swiper-slide>
+                        <swiper-slide> <app-shopping-card></app-shopping-card> </swiper-slide>
+                        <swiper-slide> <app-shopping-card></app-shopping-card> </swiper-slide>
+                        <swiper-slide> <app-shopping-card></app-shopping-card> </swiper-slide>
+
+                    </swiper-container>
+                </div>
+
+            </div>
         </div>
     </div>
 </section>

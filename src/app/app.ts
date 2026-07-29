@@ -5,10 +5,11 @@ import { Banner } from "./components/banner/banner";
 import { Footer } from './core/layout/footer/footer';
 import { PopularCategories } from './components/popular-categories/popular-categories';
 import { BestSells } from "./components/best-sells/best-sells";
+import { Deals } from "./components/deals/deals";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Banner, Footer, PopularCategories, BestSells],
+  imports: [RouterOutlet, Header, Banner, Footer, PopularCategories, BestSells, Deals],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
