@@ -1,7 +1,8 @@
 @use "../abstracts/variables" as *;
+
 @font-face {
   font-family: "PlayWrite";
-  src: url("/assets/fonts/PlaywriteNZBasic-Regular.ttf") format("truetype");
+  src: url("/assets/images/fonts/PlaywriteNZBasic-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
@@ -9,14 +10,15 @@
 body {
   font-family: "PlayWrite", sans-serif;
 }
-body{
-    font-size:16px;
+
+body {
+  font-size: 16px;
 }
 
-h1{
-    font-size:48px;
+h1 {
+  font-size: 48px;
 }
 
-h2{
-    font-size:36px;
+h2 {
+  font-size: 36px;
 }
