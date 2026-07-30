@@ -6,10 +6,11 @@ import { Footer } from './core/layout/footer/footer';
 import { PopularCategories } from './components/popular-categories/popular-categories';
 import { BestSells } from "./components/best-sells/best-sells";
 import { Deals } from "./components/deals/deals";
+import { ChooseUs } from './components/choose-us/choose-us';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Banner, Footer, PopularCategories, BestSells, Deals],
+  imports: [RouterOutlet, Header, Banner, Footer, PopularCategories, BestSells, Deals,ChooseUs],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
