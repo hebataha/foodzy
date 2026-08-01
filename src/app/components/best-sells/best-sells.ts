@@ -3,10 +3,11 @@ import { Ads } from './ads/ads';
 import { ShoppingCard } from "./shopping-card/shopping-card";
 import { ProductService } from '../../core/services/core/services/product';
 import { Products } from './products';
+import { Loader } from "../../core/layout/loader/loader";
 
 @Component({
   selector: 'app-best-sells',
-  imports: [Ads, ShoppingCard],
+  imports: [Ads, ShoppingCard, Loader],
   templateUrl: './best-sells.html',
   styleUrl: './best-sells.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
@@ -18,11 +19,13 @@ export class BestSells implements OnInit {
 
   data: any[] = [];
   errorMsg: any = "";
+  isLoading = true;
   ngOnInit(): void {
 
     this._Product.getAllProducts().subscribe({
       next: (res: any) => {
         this.data = res.products;
+        this.isLoading = false;
         console.log(this.data)
 
 
@@ -30,6 +33,7 @@ export class BestSells implements OnInit {
       error: (err) => {
         console.log(err.message);
         this.errorMsg = err;
+        this.isLoading = false;
 
       }
     })

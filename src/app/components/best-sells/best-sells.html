@@ -10,11 +10,14 @@
                 <h3 class="text-danger">{{errorMsg.message}}</h3>
                 }
 
-
-                @if(data.length === 0){
-                    <h3 class="text-muted"> there is no data </h3>
+                @else if (isLoading) {
+                <app-loader></app-loader>
+                }
+                @else if(data.length === 0){
+                <h3 class="text-muted"> there is no data </h3>
 
                 }
+                @else {
                 <div class="shopping-card__wrapper">
                     <swiper-container navigation="true" pagination="true" pagination-clickable="true"
                         space-between="100" autoplay="true" slides-per-view="4">
@@ -27,6 +30,8 @@
 
                     </swiper-container>
                 </div>
+                }
+
 
             </div>
         </div>
