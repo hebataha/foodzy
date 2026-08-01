@@ -7,10 +7,11 @@ import { PopularCategories } from './components/popular-categories/popular-categ
 import { BestSells } from "./components/best-sells/best-sells";
 import { Deals } from "./components/deals/deals";
 import { ChooseUs } from './components/choose-us/choose-us';
+import { Newsletter } from "./components/newsletter/newsletter";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Header, Banner, Footer, PopularCategories, BestSells, Deals,ChooseUs],
+  imports: [RouterOutlet, Header, Banner, Footer, PopularCategories, BestSells, Deals, ChooseUs, Newsletter],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
