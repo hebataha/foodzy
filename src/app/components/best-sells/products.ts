@@ -1,9 +1,10 @@
 export interface Products {
-    id:number,
+    id: number,
     sale: string,
     catogry: string,
     title: string,
     price: number,
     discound: number,
-    sold:number
+    sold: number,
+    images: string[];
 }

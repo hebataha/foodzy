@@ -4,21 +4,18 @@
             <div class="col-12 col-lg-3">
                 <app-ads></app-ads>
             </div>
+            
             <div class="col-12 col-lg-9">
 
                 <div class="shopping-card__wrapper">
+                    <swiper-container navigation="true" pagination="true" pagination-clickable="true"
+                        space-between="100" autoplay="true" slides-per-view="4">
+                        @for (pro of data; track $index) {
+                        <swiper-slide>
+                          <app-shopping-card [data]="pro"></app-shopping-card>
 
-                    <swiper-container navigation="true" pagination="true" pagination-clickable="true" space-between="100" autoplay="true"
-                        slides-per-view="4">
-                        <swiper-slide> <app-shopping-card></app-shopping-card></swiper-slide>
-                        <swiper-slide> <app-shopping-card></app-shopping-card></swiper-slide>
-                        <swiper-slide> <app-shopping-card></app-shopping-card> </swiper-slide>
-                        <swiper-slide> <app-shopping-card></app-shopping-card> </swiper-slide>
-                        <swiper-slide> <app-shopping-card></app-shopping-card> </swiper-slide>
-                        <swiper-slide> <app-shopping-card></app-shopping-card> </swiper-slide>
-                        <swiper-slide> <app-shopping-card></app-shopping-card> </swiper-slide>
-                        <swiper-slide> <app-shopping-card></app-shopping-card> </swiper-slide>
-                        <swiper-slide> <app-shopping-card></app-shopping-card> </swiper-slide>
+                        </swiper-slide>
+                        }
 
                     </swiper-container>
                 </div>
