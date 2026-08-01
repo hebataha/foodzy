@@ -13,24 +13,23 @@ import { Products } from './products';
 })
 export class BestSells implements OnInit {
   constructor(private _Product: ProductService) {
-  console.log('constructor');
-
   }
-  
+
 
   data: any[] = [];
+  errorMsg: any = "";
   ngOnInit(): void {
-      console.log('ngOnInit');
 
     this._Product.getAllProducts().subscribe({
       next: (res: any) => {
         this.data = res.products;
         console.log(this.data)
- 
+
 
       },
       error: (err) => {
-        console.log(err)
+        console.log(err.message);
+        this.errorMsg = err;
 
       }
     })
@@ -49,18 +48,18 @@ export class BestSells implements OnInit {
       },
       slidesPerView: 4,
       spaceBetween: 30,
-       breakpoints: {
-      // When window width is >= 640px
-      640: {
-        slidesPerView: 2,
-        spaceBetween: 20
-      },
-      // When window width is >= 1024px
-      1024: {
-        slidesPerView: 4,
-        spaceBetween: 40
+      breakpoints: {
+        // When window width is >= 640px
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20
+        },
+        // When window width is >= 1024px
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 40
+        }
       }
-    }
     };
 
 
@@ -70,5 +69,5 @@ export class BestSells implements OnInit {
     // 👈 استدعاء ميثود الانتقال للسلايد التالي
     this.swiperEl.nativeElement.swiper.slideNext();
   }
-  
+
 }
