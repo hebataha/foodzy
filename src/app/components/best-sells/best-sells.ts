@@ -1,4 +1,4 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, OnInit, ViewChild ,signal } from '@angular/core';
 import { Ads } from './ads/ads';
 import { ShoppingCard } from "./shopping-card/shopping-card";
 import { ProductService } from '../../core/services/core/services/product';
@@ -17,23 +17,23 @@ export class BestSells implements OnInit {
   }
 
 
-  data: any[] = [];
-  errorMsg: any = "";
-  isLoading = true;
+  data = signal<any[]>([]);
+  errorMsg = signal<any>(null);
+  isLoading = signal(true);
   ngOnInit(): void {
 
     this._Product.getAllProducts().subscribe({
       next: (res: any) => {
-        this.data = res.products;
-        this.isLoading = false;
+        this.data.set(res.products);
+        this.isLoading.set(false);
         console.log(this.data)
 
 
       },
       error: (err) => {
         console.log(err.message);
-        this.errorMsg = err;
-        this.isLoading = false;
+        this.errorMsg.set(err);
+        this.isLoading.set(false) ;
 
       }
     })
